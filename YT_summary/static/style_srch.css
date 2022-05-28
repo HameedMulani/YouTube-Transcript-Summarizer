@@ -1,0 +1,84 @@
+
+    body,html{
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: #2D2926FF;
+        color: #E94B3CFF;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+    #head{
+        height: 100px;
+        font-size:50px;
+        color: #2D2926FF;
+        background-color: #E94B3CFF;
+            width: 100%;
+    }    
+    #txt{
+        font-size: 30px;
+        
+    }
+    
+        .searchbar{
+        margin-bottom: auto;
+        margin-top: auto;
+        height: 60px;
+        background-color: #353b48;
+        border-radius: 30px;
+        padding: 10px;
+        }
+    
+        .search_input{
+        color: white;
+        border: 0;
+        outline: 0;
+        background: none;
+        width: 0;
+        caret-color:transparent;
+        line-height: 40px;
+        transition: width 0.4s linear;
+        }
+    
+        .searchbar:hover > .search_input{
+        padding: 0 10px;
+        width: 450px;
+        caret-color:red;
+        transition: width 0.4s linear;
+        }
+    
+        .searchbar:hover > .search_icon{
+        background: white;
+        color: #e74c3c;
+        }
+    
+        .search_icon{
+        height: 40px;
+        width: 40px;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color:white;
+        text-decoration:none;
+        }
+    #singlebutton{
+        background-color: black;
+        margin-left: 43%;
+        font-size: large;
+        color: white;
+        border-radius: 10px;
+        border-color: #E94B3CFF;
+        }
+    .output{
+        width: 100%;
+        font-size: 17px;
+        font-family: 'Times New Roman', Times, serif;
+        color:black;
+        text-align: justify;
+        
+    }
+    
+        

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Awesome Summarizer</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style_srch.css'%}">
+  </head>
+  <!-- Coded with love by Mutiullah Samim-->
+  <body>
+    <b><center><label id="head" for="topic">YouTube Transcript Summarizer</label></center></b>
+    <form action="/Get_sum/" name="home_pg" method="post" style="position: relative;">
+      {% csrf_token %}
+      <div class="container h-50">
+      <div class="d-flex justify-content-center h-100">
+        <label for="a" id="txt">Enter the Link: &nbsp;  </label>
+        <div class="searchbar">
+          <input class="search_input" type="text" id="YTlink" name="get_url" placeholder="Paste the URL here...">
+          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+        </div>
+      </div>
+      <br>
+      <button id="singlebutton" type="submit" name="singlebutton" onclick="verify()" class="btn btn-primary">Get Summary</button>
+      <br><br>
+        <div class="output" id="op" onmousemove="myfunc()">
+         <p id="st"></p> 
+         {{data1}}
+        {{data_external}}<br><br>
+       
+       </div>
+      </div>
+    
+  </form>
+  
+  <script>
+
+    
+    function myfunc() 
+    {
+      var targetDiv = document.getElementById("op");
+      targetDiv.style.background="white";
+      var x=document.getElementById("st");
+      x.innerHTML="Summarized Text:"
+      
+    }
+    function verify()
+    {
+      var empt = document.forms["home_pg"]["get_url"].value;
+      if(empt == "")
+      {
+        alert("Please Enter Video URL")
+        document.home_pg.action="http://127.0.0.1:8000/";
+      }
+      else
+      {
+       
+      }
+    }
+  </script>
+    
+  </body>
+</html>
